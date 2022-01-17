@@ -1,0 +1,27 @@
+import calendar, os
+print('CALENDAR BY IMTIAZ ADAR\n\n')
+print("ENTER YOUR CHOICE\n\n1. FULL YEAR'S CALENDAR\n2. SPECIFIC MONTH'S CALENDAR\n3. TODAY\n")
+choice = int(input())
+if choice == 1:
+    print('ENTER YEAR : ')
+    year = int(input())
+    print(f"\n{year}'S FULL CALENDAR\n")
+    print(calendar.calendar(year))
+    os.system('pause')
+elif choice == 2:
+    print('ENTER YEAR : ')
+    year = int(input())
+    print('ENTER MONTH : ')
+    month = int(input())
+    print(f"{year} {calendar.month_name[month].upper()}'S CALENDAR\n")
+    print(calendar.month(year, month))
+    os.system('pause')
+elif choice == 3:
+    print('ENTER YEAR : ')
+    year = int(input())
+    print('ENTER MONTH : ')
+    month = int(input())
+    print('ENTER DAY : ')
+    day = int(input())
+    print(f'\nTODAY IS : {calendar.day_name[calendar.weekday(year, month, day)].upper()}\n')
+    os.system('pause')
